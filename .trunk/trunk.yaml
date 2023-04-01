@@ -2,7 +2,7 @@ version: 0.1
 cli:
   version: 1.7.1-beta.1
 api:
-  address: sam-dell.tailnet-6e00.ts.net:8443
+  address: 6200-136-24-212-94.ngrok.io 
 
 plugins:
   sources:
