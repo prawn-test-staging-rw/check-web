@@ -6,9 +6,7 @@ jobs:
   trunk_check:
     name: check
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: trunk-io/trunk-action@sam/auto-setup
-      with: {}
+      - uses: trunk-io/trunk-action@sam/auto-setup
