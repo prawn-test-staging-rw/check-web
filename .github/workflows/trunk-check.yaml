@@ -3,11 +3,25 @@ on:
   pull_request: {}
 
 jobs:
-  trunk_check:
-    name: check
+  # trunk_check:
+  #   name: check
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+
+  #     - uses: trunk-io/trunk-action@sam/auto-setup
+
+  trunk_upgrade:
+    name: Upgrade Trunk
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write # For trunk to create PRs
+      pull-requests: write # For trunk to create PRs
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - uses: trunk-io/trunk-action@sam/auto-setup
+      - name: Trunk Upgrade
+        uses: trunk-io/trunk-action/upgrade@tyler/auto-setup-upgrade # external users: use trunk-io/trunk-action/upgrade@v1
+        with:
+          reviewers: TylerJang27
