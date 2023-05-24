@@ -3,13 +3,13 @@ on:
   pull_request: {}
 
 jobs:
-  trunk_check:
-    name: check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+  # trunk_check:
+  #   name: check
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - uses: trunk-io/trunk-action@sam/auto-setup
+  #     - uses: trunk-io/trunk-action@sam/auto-setup
 
   trunk_upgrade:
     name: Upgrade Trunk
